@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.UpdatePatientController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="48.0" prefHeight="574.0" prefWidth="1015.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="UpdatePatientBtn" layoutX="75.0" layoutY="387.0" mnemonicParsing="false" onAction="#UpdatePatientbt" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #2926bc;" styleClass="saveButton" stylesheets="@../../css/admin.css" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="210.0" layoutY="387.0" mnemonicParsing="false" onAction="#cancelUserCreation" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #d31717;" styleClass="cancelButton" stylesheets="@../../css/admin.css" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="12.0" layoutY="58.0" prefHeight="42.0" prefWidth="127.0" text="First Name " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstnameTF" layoutX="151.0" layoutY="65.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="passwordTF" layoutX="151.0" layoutY="107.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="12.0" layoutY="100.0" prefHeight="42.0" prefWidth="127.0" text="Password " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTF" layoutX="465.0" layoutY="113.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="350.0" layoutY="101.0" prefHeight="42.0" prefWidth="95.0" text="Email " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="219.0" prefHeight="42.0" prefWidth="127.0" text="Gender" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="255.0" prefHeight="42.0" prefWidth="127.0" text="Role" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="167.0" layoutY="227.0" mnemonicParsing="false" selected="true" text="Male" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="femaleRadio" layoutX="263.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="adminRadio" layoutX="263.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Admin" textFill="#383560">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="169.0" layoutY="263.0" mnemonicParsing="false" selected="true" text="patient" textFill="#383560" toggleGroup="$roleGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="ageTF" layoutX="151.0" layoutY="156.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="12.0" layoutY="150.0" prefHeight="42.0" prefWidth="127.0" text="age" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTF" layoutX="151.0" layoutY="21.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="lastnameTF" layoutX="465.0" layoutY="65.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="12.0" layoutY="14.0" prefHeight="42.0" prefWidth="127.0" text="User Name " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="58.0" prefHeight="42.0" prefWidth="118.0" text="Last Name " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneTF" layoutX="465.0" layoutY="157.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="358.0" layoutY="150.0" prefHeight="42.0" prefWidth="73.0" text="phone" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="339.0" prefHeight="42.0" prefWidth="286.0" text=" Update patient">
+         <effect>
+            <Glow level="0.45" />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

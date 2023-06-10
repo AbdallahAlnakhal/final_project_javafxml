@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="769.0" prefWidth="1024.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.UsersManagmentController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="67.0" prefHeight="682.0" prefWidth="1025.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <TableView fx:id="plist" layoutX="14.0" layoutY="197.0" prefHeight="233.0" prefWidth="767.0">
+              <columns>
+                <TableColumn fx:id="tcid" prefWidth="44.0" text="id" />
+                <TableColumn fx:id="tcusername" prefWidth="83.0" text="username" />
+                  <TableColumn fx:id="tcpassword" prefWidth="93.0" text="password" />
+                  <TableColumn fx:id="rcemail" prefWidth="126.0" text="email" />
+                  <TableColumn fx:id="tcfirstname" prefWidth="93.0" text="firstname" />
+                  <TableColumn fx:id="tclastname" prefWidth="91.0" text="lastname" />
+                  <TableColumn fx:id="rcage" prefWidth="54.0" text="age" />
+                  <TableColumn fx:id="tcphone" prefWidth="81.0" text="phone" />
+                  <TableColumn fx:id="tcgender" prefWidth="50.0" text="gender" />
+                  <TableColumn fx:id="tcRol" prefWidth="56.0" text="role " />
+              </columns>
+            </TableView>
+            <Button fx:id="updateSelectedUserBtn" layoutX="14.0" layoutY="440.0" mnemonicParsing="false" onAction="#updateSelectedUser" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #244fdd;" styleClass="updateBtn" stylesheets="@../../css/admin.css" text="Update" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteSelectedUserBtn" layoutX="145.0" layoutY="440.0" mnemonicParsing="false" onAction="#deleteSelectedUser" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #d31717;" styleClass="deleteBtn" stylesheets="@../../css/admin.css" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <HBox layoutX="67.0" layoutY="14.0" prefHeight="73.0" prefWidth="643.0">
+               <children>
+                  <Button fx:id="showAllUsersBtn" mnemonicParsing="false" onAction="#showAllUsers" prefHeight="49.0" prefWidth="227.0" style="-fx-background-color: #2993d0;" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Show All Users" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="createNewUserBtn" mnemonicParsing="false" onAction="#showUserCreationPage" prefHeight="49.0" prefWidth="203.0" style="-fx-background-color: #2993d0;" styleClass="createBtn" stylesheets="@../../css/admin.css" text="+ Create New Patient" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="showAppoBtn1" mnemonicParsing="false" onAction="#showAllApp" prefHeight="49.0" prefWidth="210.0" style="-fx-background-color: #2993d0;" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Show appointments" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="sbt" layoutX="718.0" layoutY="144.0" mnemonicParsing="false" onAction="#searchbtn" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #2993d0;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="LogoutaBtn" layoutX="887.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogoutAdBtn" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #0c3186;" styleClass="deleteBtn" stylesheets="@../../css/admin.css" text="Log Out" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="filterField" layoutX="497.0" layoutY="144.0" prefHeight="30.0" prefWidth="221.0" style="-fx-border-color: #2993d0;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="438.0" layoutY="14.0" prefHeight="42.0" prefWidth="326.0" text="Admin Dashboard">
+         <effect>
+            <Glow level="0.45" />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
